@@ -1,0 +1,24 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "MemoryGuard",
+	"Description": "Defends against potential memory tampering attacks.",
+	"Category": "Other",
+	"CreatedBy": "ArmainAP",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "MemoryGuard",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}
