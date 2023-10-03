@@ -2,20 +2,28 @@
 
 #pragma once
 
+#include "CoreMinimal.h"
 #include "Misc/AES.h"
 #include "ThirdParty/picosha2.h"
-#include <vector>
 
 template <typename T>
 struct FGuardedValue
 {
-    //static_assert(std::is_trivially_copyable_v<T>, "FGuardedValue requires a trivially copyable type");
-
 private:
     FString Value;
     FString Signature;
 
 public:
+	FGuardedValue()
+	{
+		SetValue(T());
+	}
+	
+	FGuardedValue(const T& NewValue)
+	{
+		SetValue(NewValue);
+	}
+	
     T GetValue() const
     {
         T Result{};

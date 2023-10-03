@@ -16,12 +16,12 @@ class MEMORYGUARD_API UBlueprintGuardedValue : public UBlueprintFunctionLibrary
 
 public:
 	/** Gets the value of the specified GuardedValue. */
-	UFUNCTION(BlueprintCallable, CustomThunk, meta = (CustomStructureParam = "OutValue", AutoCreateRefTerm = "OutValue"))
+	UFUNCTION(BlueprintCallable, CustomThunk, meta = (CustomStructureParam = "OutValue", AutoCreateRefTerm = "OutValue"), Category=MemoryGuard)
 	void GetGuardedValue(UPARAM(DisplayName="Value") int32& OutValue);
 	DECLARE_FUNCTION(execGetGuardedValue);
 
 	/** Adds (new) or sets (existing) the value of the specified GuardedValue. */
-	UFUNCTION(BlueprintCallable, CustomThunk, meta = (CustomStructureParam = "Value", AutoCreateRefTerm = "Value"))
+	UFUNCTION(BlueprintCallable, CustomThunk, meta = (CustomStructureParam = "Value", AutoCreateRefTerm = "Value"), Category=MemoryGuard)
 	void SetGuardedValue(const int32& Value);
 	DECLARE_FUNCTION(execSetGuardedValue);
 	
