@@ -5,7 +5,7 @@
 #include "GuardedFloat.generated.h"
 
 USTRUCT(Blueprintable, BlueprintType)
-struct FGuardedFloat
+struct MEMORYGUARD_API FGuardedFloat
 {
 	GENERATED_BODY()
 

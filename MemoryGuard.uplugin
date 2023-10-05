@@ -18,7 +18,7 @@
 		{
 			"Name": "MemoryGuard",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "PreDefault"
 		}
 	]
 }
