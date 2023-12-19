@@ -1,6 +1,6 @@
 // Copyright to Kat Code Labs, SRL. All Rights Reserved.
 
-#include "BlueprintGuardedValue.h"
+#include "DataTypes/BlueprintGuardedValue.h"
 
 #define LOCTEXT_NAMESPACE "UBlueprintGuardedValue"
 

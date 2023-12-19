@@ -67,8 +67,8 @@ public:
 		const uint8* BytePtr = reinterpret_cast<const uint8*>(&NewValue);
 		TArray DataArray(BytePtr, sizeof(T));
 		PadData(DataArray);
-		Signature = HashData(DataArray); const uint8* KeyPtr = reinterpret_cast<const uint8*>(TCHAR_TO_ANSI(*Signature));
-		FAES::EncryptData(DataArray.GetData(), DataArray.Num(), KeyPtr, FAES::FAESKey::KeySize);
+		Signature = HashData(DataArray);
+		FAES::EncryptData(DataArray.GetData(), DataArray.Num(), reinterpret_cast<const uint8*>(TCHAR_TO_ANSI(*Signature)), FAES::FAESKey::KeySize);
 		Value = FBase64::Encode(DataArray);
 	}
 
